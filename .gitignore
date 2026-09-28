@@ -1,44 +1,96 @@
+# ============================================================
 # Environment variables / secrets
+# ============================================================
 .env
 .env.*
 !.env.example
 
+
+# ============================================================
 # Python
+# ============================================================
 __pycache__/
 *.py[cod]
 *.pyo
+*.pyd
 
+
+# ============================================================
 # Virtual environments
+# ============================================================
 venv/
 .venv/
 env/
+ENV/
 
-# YOLO / generated outputs
+
+# ============================================================
+# YOLO / Ultralytics generated files
+# ============================================================
 runs/
-json_results/
-detection_results.json
-test_detection.json
+*.pt
+*.onnx
+*.engine
 
-# Videos
+
+# ============================================================
+# Videos / media files
+# ============================================================
 videos/
 *.mp4
 *.avi
 *.mov
 *.mkv
+*.webm
 
-# YOLO model weights
-*.pt
 
+# ============================================================
+# Generated JSON detection / tracking / activity results
+# ============================================================
+json_results/
+detection_results.json
+test_detection.json
+
+activity_features.json
+displacement_5sec.json
+movement_5sec.json
+movement_features.json
+person_tracking.json
+pose_ratios.json
+smoothed_movement.json
+
+
+# ============================================================
 # Logs
+# ============================================================
 *.log
 logs/
 
-# VS Code
-.vscode/
 
+# ============================================================
 # Jupyter
+# ============================================================
 .ipynb_checkpoints/
 
-# OS files
+
+# ============================================================
+# VS Code
+# ============================================================
+.vscode/
+
+
+# ============================================================
+# OS generated files
+# ============================================================
 .DS_Store
 Thumbs.db
+
+
+# ============================================================
+# Temporary files
+# ============================================================
+*.tmp
+*.temp
+# Activity generated frames and results
+activity_frames/
+activity_results.json
